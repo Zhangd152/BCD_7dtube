@@ -1,0 +1,9 @@
+module BCD_7dtube(X,led);
+	input [3:0] X;
+	output [8:0] led;
+	wire [6:0] Y;
+	decode47(X,Y);
+	assign led[6:0]=Y;
+	assign led[7]=0;
+	assign led[8]=0;
+endmodule
